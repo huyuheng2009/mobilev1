@@ -1,0 +1,52 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+group = 'com.yogapay.hft'
+version = '1.0-SNAPSHOT'
+
+targetCompatibility = '1.6'
+sourceCompatibility = '1.6'
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+
+	mavenRepo name: 'jpos', url: 'http://jpos.org/maven'
+	mavenRepo name: 'alibaba', url: 'http://code.alibabatech.com/mvn/releases/'
+	mavenRepo name: 'caucho', url: 'http://caucho.com/m2/'
+    mavenRepo name: 'sonatype', url: 'http://repository.sonatype.org/content/groups/public/'
+    mavenRepo name: 'maven', url: 'http://repo1.maven.org/maven2/'
+}
+
+dependencies {
+//	compile ('org.jpos.ext:jpos_ext:1.0-SNAPSHOT') {
+//        exclude module: 'c3p0'
+//    }
+
+	compile 'mysql:mysql-connector-java:5.1.30'
+	compile 'com.alibaba:fastjson:1.1.29'
+	compile 'log4j:log4j:1.2.9'
+
+	compile 'org.apache.tomcat.embed:tomcat-embed-core:7.0.39'
+	compile 'org.apache.tomcat.embed:tomcat-embed-logging-juli:7.0.39'
+	compile 'org.apache.tomcat.embed:tomcat-embed-logging-log4j:7.0.39'
+	compile 'org.apache.tomcat.embed:tomcat-embed-jasper:7.0.39'
+
+	compile 'commons-codec:commons-codec:1.6'
+
+    compile 'org.bouncycastle:bcprov-jdk16:1.46'
+	groovy 'org.codehaus.groovy:groovy-all:2.0.6'
+
+	testCompile 'junit:junit:4.10'
+    compile 'commons-httpclient:commons-httpclient:3.1'
+    compile 'org.apache.commons:commons-email:1.3.1'
+}
+
+task libs(type: Sync) {
+    from configurations.runtime
+    into "$buildDir/lib"
+}
+

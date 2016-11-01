@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<logger name="Q2" class="org.jpos.q2.qbean.LoggerAdaptor">
+    <log-listener name="protected_log" class="org.jpos.util.ProtectedLogListener">
+        <property name="wipe" value="2 35 36 48 52 55 62"/>
+    </log-listener>
+	<log-listener name="stdout_log" class="org.jpos.util.SimpleLogListener"/>
+	<log-listener name="daily_log" class="org.jpos.util.DailyLogListener">
+		<property name="window" value="86400"/>
+		<property name="prefix" value="log/mobile"/>
+		<property name="suffix" value=".log"/>
+		<property name="date-format" value="-yyyy-MM-dd"/>
+		<property name="compression-format" value="zip"/>
+	</log-listener>
+</logger>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channel-adaptor name="ts_channel" class="org.jpos.q2.iso.OneShotChannelAdaptor" logger="Q2">
+	<channel class="org.jpos.ext.channel.HEXChannel" logger="Q2" realm="acq"
+	         packager="org.jpos.iso.packager.GenericPackager"
+	         header="6000060000603000000000">
+
+		<property name="host" value="183.62.232.130"/>
+		<property name="port" value="4000"/>
+
+		<property name="override-header" value="false"/>
+		<property name="packager-config" value="conf/packager/posp.xml"/>
+		<property name="timeout" value="60000"/>
+	</channel>
+
+	<in>send</in>
+	<out>receive</out>
+	<reconnect-delay>10000</reconnect-delay>
+</channel-adaptor>

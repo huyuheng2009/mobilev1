@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<key-store name="keyStore" class="org.jpos.q2.security.KeyStoreAdaptor" logger="Q2">
+	<attr name="impl">org.jpos.ext.security.SimpleDBKeyStore</attr>
+	<property name="datasource" value="datasource:default"/>
+	<property name="sequence" value="seq_keystore"/>
+</key-store>

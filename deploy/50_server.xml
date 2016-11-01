@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<httpserver class="http.TomcatServer" logger="Q2" realm="http">
+    <property name="port" value="29002"/>
+    <property name="script" value="Handler.groovy"/>
+</httpserver>

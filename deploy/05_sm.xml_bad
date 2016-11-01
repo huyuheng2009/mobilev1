@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s-m-adaptor name="hsm" class="org.jpos.q2.security.SMAdaptor" logger="Q2">
+	<attr name="impl">org.jpos.ext.security.SoftSecurityModule</attr>
+	<property name="provider" value="com.sun.crypto.provider.SunJCE"/>
+	<property name="lmk" value="deploy/lmk"/>
+</s-m-adaptor>

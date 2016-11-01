@@ -1,0 +1,12 @@
+[
+	{
+		"name":"android.hft",
+		"version":"1.0.2",
+		"address":"http://download.yogapay.com:8777/hft-1.0.2.apk"
+	},
+	{
+		"name":"android.xxx",
+		"version":"1.0.1",
+		"address":"http://download.yogapay.com:8777/xxx-1.0.1.apk"
+	}
+]
